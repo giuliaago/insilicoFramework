@@ -21,7 +21,8 @@ As evidence of the feasibility and relevance of the proposed framework, we have 
 
 As told, this framework is based on the use of ecoPCR and ExTaxsI. 
 
-ecoPCR is a xxxxxx
+ecoPCR is the OBITools program aimed at performing *in silico* PCR. <code>xxxxxxxxxxx</code>
+
 These softwares are required in order to install OBITools:
 1. Download Python 2.7 and Python 3 if you haven’t already at https://www.python.org/
 2. Download gcc at the GNU sites https://www.gnu.org/software/gcc/ and https://www.gnu.org/software/make/
