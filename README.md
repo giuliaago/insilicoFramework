@@ -27,11 +27,16 @@ To use ecoPCR you have to install the OBITools package. Please, ckeck if you hav
 
 To install OBITools package follow these instructions:
 1.  Download <code>get-obitools.py</code> script available at https://pythonhosted.org/OBITools/_downloads/get-obitools.py
-2.  When you have completed the download, move the file get-obitools.py to the folder where install OBITools. Run <code>python get-obitools.py</code> to create a new directory named "OBITools" followed by the number of latest version available, where all the OBITools are installed automatically
+2.  When you have completed the download, move the file get-obitools.py to the folder where install OBITools. Run <code>python get-obitools.py</code> to create a new directory named "OBITools-VERSION" (i.e. version stands for the number of latest tool version available), where all the OBITools are installed automatically
 3.  Run the script <code>./obitools</code> to activate the OBITools
 4.  And finally once you have finish, type <code>exit</code> to disactivate the OBITools
 
 ## Download sequences with Entrez tools
+
+Now you can create the database for the following *in silico* amplification downloading the sequences of interest in base of the information collected (i.e  target taxa, the barcode marker(s), and primer pairs) in the literature search.
+ <code>xxxxxxxxxxxxxxxxxx</code>
+
+
 
 Download the locus sequences for the taxa of interest from GenBank using the command <code>esearch -db nucleotide -query "txid29178[ORGN] AND GENE " | efetch -format gb > file.gb</code>. 
 
