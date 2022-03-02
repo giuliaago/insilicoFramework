@@ -1,4 +1,4 @@
-# *In silico* PCR framework 
+# *In silico* framework 
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/86804408/156333546-aca868b4-f3df-47d2-a148-9516b52ec0b4.jpg" alt="IN silico PCR framework"/>
