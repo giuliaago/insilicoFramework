@@ -13,7 +13,7 @@ The framework consists of the following steps:
 4. ***In silico* amplification.** Amplify the sequences of the expected taxa using the primer pair(s) candidate(s) via ecoPCR from the obitools package. 
 5. **Data exploration and visualization.** Evaluate primer pairs performance, i.e. producing visualizations. 
 
-As shown in the figure, you can return to the literature search step in any phase of the framework if the output isn't as expected.
+As shown in the figure, you can return to the literature search step in any phase of the framework if the output isn't as you expect.
 
 As evidence of the feasibility and relevance of the proposed framework, we have uploaded the results of its application to the investigation of the giant red shrimp *A. foliacea* diet. Please visit the **xxx** directory of this Github page to see ecoPCR outputs, scatter plots and sunburst plots extracting the taxonomy of the genes amplificated; both the visualizations were created via ExTaxsI tool <a href="https://academic.oup.com/gigascience/article/doi/10.1093/gigascience/giab092/6514924?login=true">[3]</a>.
 
