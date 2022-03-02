@@ -29,7 +29,7 @@ To install OBITools package follow these instructions:
 1.  Download <code>get-obitools.py</code> script available at https://pythonhosted.org/OBITools/_downloads/get-obitools.py
 2.  When you have completed the download, move the file get-obitools.py to the folder where install OBITools. Run <code>python get-obitools.py</code> to create a new directory named "OBITools" followed by the number of latest version available, where all the OBITools are installed automatically
 3.  Run the script <code>./obitools</code> to activate the OBITools
-4.  Once you have finish, type <code>exit</code> to disactivate the OBITools
+4.  And finally once you have finish, type <code>exit</code> to disactivate the OBITools
 
 To download and install ExTaxsI, please visit ExTaxsI GitHub page https://github.com/qLSLab/ExTaxsI and follow the instructions. 
 
