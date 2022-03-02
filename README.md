@@ -4,14 +4,14 @@
   <img src="https://user-images.githubusercontent.com/86804408/156333546-aca868b4-f3df-47d2-a148-9516b52ec0b4.jpg" alt="IN silico PCR framework"/>
 </p>
 
-This framework aims for a data-driven selection of the best primer pair(s) candidate(s) to potentially use in a more conscious molecular characterization of any metabarcoding study. It integrates the widely used ecoPCR software <a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-11-434">[1]</a> from OBITools <a href=https://onlinelibrary.wiley.com/doi/full/10.1111/1755-0998.12428>[2]</a> with a user-defined database without the download of the entire EMBL database. 
+This framework aims for a data-driven selection of the best primer pairs candidates to potentially use in a more conscious molecular characterization of any metabarcoding study. It integrates the widely used ecoPCR software <a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-11-434">[1]</a> from OBITools <a href=https://onlinelibrary.wiley.com/doi/full/10.1111/1755-0998.12428>[2]</a> with a user-defined database without the download of the entire EMBL database. 
 
 The framework consists of the following steps: 
 1. **Literature search: background information investigation.** This step consists in the exploration of the background information, i.e. ecological niche, already available in scientific literature to define the expected taxa present in the investigated environment.
-2. **Literature search: molecular marker investigation.** Based on the predicted taxa, identify the most appropriate metabarcoding marker(s) with the resolution at the taxonomic levels of interest and, consequently, the suitable primer pair(s) to amplify them.
+2. **Literature search: molecular marker investigation.** Based on the predicted taxa, identify the most appropriate metabarcoding marker(s) with the resolution at the taxonomic levels of interest and, consequently, the suitable primer pairs to amplify them.
 3. **Data availability and download.** Evaluate the genetic information available in the NCBI database (https://www.ncbi.nlm.nih.gov/) through different combination of queries, based on the TaxID, the locus of interest, and the metadata. This step is crucial to obtain a defined database.
 4. ***In silico* amplification.** Amplify the sequences of the expected taxa using the primer pair(s) candidate(s) via ecoPCR from the obitools package. 
-5. **Data exploration and visualization.** Evaluate primer pair(s) performance, i.e. producing visualizations. 
+5. **Data exploration and visualization.** Evaluate primer pairs performance, i.e. producing visualizations. 
 
 As shown in the figure, you can return to the literature search step in any phase of the framework if the output isn't as expected.
 
