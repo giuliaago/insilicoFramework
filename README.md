@@ -10,7 +10,7 @@ The framework consists of the following steps:
 1. **Literature search: background information investigation.** This step consists in the exploration of the background information, i.e. ecological niche, already available in scientific literature to define the expected taxa present in the investigated environment.
 2. **Literature search: molecular marker investigation.** Based on the predicted taxa, identify the most appropriate metabarcoding marker(s) with the resolution at the taxonomic levels of interest and, consequently, the suitable primer pairs to amplify them.
 3. **Data availability and download.** Evaluate the genetic information available in the NCBI database (https://www.ncbi.nlm.nih.gov/) through different combination of queries, based on the TaxID, the locus of interest, and the metadata. This step is crucial to obtain a defined database.
-4. ***In silico* amplification.** Amplify the sequences of the expected taxa using the primer pair(s) candidate(s) via ecoPCR from the obitools package. 
+4. ***In silico* amplification.** Amplify the sequences of the expected taxa using the primer pairs candidates via ecoPCR from the obitools package. 
 5. **Data exploration and visualization.** Evaluate primer pairs performance, i.e. producing visualizations. 
 
 As shown in the figure, you can return to the literature search step in any phase of the framework if the output isn't as you expect.
