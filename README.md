@@ -4,7 +4,7 @@
   <img src="https://user-images.githubusercontent.com/86804408/156333546-aca868b4-f3df-47d2-a148-9516b52ec0b4.jpg" alt="IN silico PCR framework"/>
 </p>
 
-This framework aims for a data-driven selection of the best primer pair(s) candidate(s) to potentially use in a more conscious molecular characterization of any metabarcoding study. It integrates the widely used ecoPCR software <a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-11-434">[1]</a> from OBITools <a href=https://onlinelibrary.wiley.com/doi/full/10.1111/1755-0998.12428[2] with a user-defined database without the download of the entire EMBL database. 
+This framework aims for a data-driven selection of the best primer pair(s) candidate(s) to potentially use in a more conscious molecular characterization of any metabarcoding study. It integrates the widely used ecoPCR software <a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-11-434">[1]</a> from OBITools <a href=https://onlinelibrary.wiley.com/doi/full/10.1111/1755-0998.12428>[2]</a> with a user-defined database without the download of the entire EMBL database. 
 
 The framework consists of the following steps: 
 1. **Literature search: background information investigation.** This step consists in the exploration of the background information, i.e. ecological niche, already available in scientific literature to define the expected taxa present in the investigated environment.
@@ -15,7 +15,7 @@ The framework consists of the following steps:
 
 As shown in the figure, you can return to the literature search step in any phase of the framework if the output isn't as expected.
 
-As evidence of the feasibility and relevance of the proposed framework, we have uploaded the results of its application to the investigation of the giant red shrimp *A. foliacea* diet. Please visit the **xxx** directory of this Github page to see ecoPCR outputs, scatter plots and sunburst plots extracting the taxonomy of the genes amplificated; both the visualizations were created via ExTaxsI tool [3].
+As evidence of the feasibility and relevance of the proposed framework, we have uploaded the results of its application to the investigation of the giant red shrimp *A. foliacea* diet. Please visit the **xxx** directory of this Github page to see ecoPCR outputs, scatter plots and sunburst plots extracting the taxonomy of the genes amplificated; both the visualizations were created via ExTaxsI tool .
 
 ## Download ecoPCR
 
