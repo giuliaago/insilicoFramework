@@ -17,15 +17,14 @@ As shown in the figure, you can return to the literature search step in any phas
 
 As evidence of the feasibility and relevance of the proposed framework, we have uploaded the results of its application to the investigation of the giant red shrimp *A. foliacea* diet. Please visit the **xxx** directory of this Github page to see ecoPCR outputs, scatter plots and sunburst plots extracting the taxonomy of the genes amplificated; both the visualizations were created via ExTaxsI tool [3].
 
-## Before starting
+## Download ecoPCR
 
 As told, this framework is based on the use of ecoPCR and ExTaxsI. 
 
+ecoPCR is a xxxxxx
 These softwares are required in order to install OBITools:
 1. Download Python 2.7 and Python 3 if you haven’t already at https://www.python.org/
 2. Download gcc at the GNU sites https://www.gnu.org/software/gcc/ and https://www.gnu.org/software/make/
-
-## Download ecoPCR
 
 Follow the instructions below to install OBITools:
 1.  Download <code>get-obitools.py</code> script available at https://pythonhosted.org/OBITools/_downloads/get-obitools.py
