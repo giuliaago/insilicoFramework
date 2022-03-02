@@ -22,12 +22,14 @@ As evidence of the feasibility and relevance of the proposed framework, we have 
 ecoPCR is the program included in the OBITools package aimed at performing *in silico* PCR. Based on the pattern matching algorithm Agrep <a href="https://www.usenix.org/legacy/publications/library/proceedings/wu.pdf">[4]</a>, ecoPCR allows specifying the count of mismatches (up to a maximum of three) between the primer and the target sequence. Furthermore, this tool accepts multiple target sequences (i.e. the templates) which is crucial if you want to predict the amplification results of a metabarcoding study.
 
 To use ecoPCR you have to install the OBITools package. Please, ckeck if you have the following required software:
-1. **Python 2.7**, that you can download at https://www.python.org/
-2. **gcc**, available at the GNU sites https://www.gnu.org/software/gcc/ and https://www.gnu.org/software/make/
+* **Python 2.7**, that you can download at https://www.python.org/
+* **gcc**, available at the GNU sites https://www.gnu.org/software/gcc/ and https://www.gnu.org/software/make/
 
-Follow the instructions below to install OBITools:
+To install OBITools package follow these instructions:
 1.  Download <code>get-obitools.py</code> script available at https://pythonhosted.org/OBITools/_downloads/get-obitools.py
-2.  Run the command python <code>get-obitools.py</code>. All the OBITools will be installed in a new directory at the location where you run the script.
+2.  When you have completed the download, move the file get-obitools.py to the folder where install OBITools. Run <code>python get-obitools.py</code> to create a new directory named "OBITools" followed by the number of latest version available, where all the OBITools are installed automatically
+3.  Run the script <code>./obitools<code/> to activate the OBITools
+4. Once you have finish, type <code>exit<code/> to disactivate the OBITools 
 
 To download and install ExTaxsI, please visit ExTaxsI GitHub page https://github.com/qLSLab/ExTaxsI and follow the instructions. 
 
