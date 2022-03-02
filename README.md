@@ -31,8 +31,6 @@ To install OBITools package follow these instructions:
 3.  Run the script <code>./obitools</code> to activate the OBITools
 4.  And finally once you have finish, type <code>exit</code> to disactivate the OBITools
 
-To download and install ExTaxsI, please visit ExTaxsI GitHub page https://github.com/qLSLab/ExTaxsI and follow the instructions. 
-
 ## Download sequences with Entrez tools
 
 Download the locus sequences for the taxa of interest from GenBank using the command <code>esearch -db nucleotide -query "txid29178[ORGN] AND GENE " | efetch -format gb > file.gb</code>. 
@@ -69,6 +67,8 @@ Extract the list of taxIDs from the ecoPCR outputs, i.e. amplified sequences, us
 Convert the list of taxIDs to a 6 level rank file using the Taxonomy ID converter module (Module number 2) of the tool <code>ExTaxsI</code>. Download ExTaxsI at https://github.com/qLSLab/ExTaxsI
 
 Now you are ready to visualize the results. Use the Visualization module (Module number 2) of <code>ExTaxsI</code> to create scatter plots and sunburst plots from the taxonomy file.
+
+To download and install ExTaxsI, please visit ExTaxsI GitHub page https://github.com/qLSLab/ExTaxsI and follow the instructions. 
 
 ## References
 
