@@ -19,13 +19,11 @@ As evidence of the feasibility and relevance of the proposed framework, we have 
 
 ## Download ecoPCR
 
-As told, this framework is based on the use of ecoPCR and ExTaxsI. 
+ecoPCR is the program included in the OBITools package aimed at performing *in silico* PCR. Based on the pattern matching algorithm Agrep <a href="https://www.usenix.org/legacy/publications/library/proceedings/wu.pdf">[4]</a>, ecoPCR allows specifying the count of mismatches (up to a maximum of three) between the primer and the target sequence. Furthermore, this tool accepts multiple target sequences (i.e. the templates) which is crucial if you want to predict the amplification results of a metabarcoding study.
 
-ecoPCR is the OBITools program aimed at performing *in silico* PCR. <code>xxxxxxxxxxx</code>
-
-These softwares are required in order to install OBITools:
-1. Download Python 2.7 and Python 3 if you haven’t already at https://www.python.org/
-2. Download gcc at the GNU sites https://www.gnu.org/software/gcc/ and https://www.gnu.org/software/make/
+To use ecoPCR you have to install the OBITools package. Please, ckeck if you have the following required software:
+1. **Python 2.7**, that you can download at https://www.python.org/
+2. **gcc**, available at the GNU sites https://www.gnu.org/software/gcc/ and https://www.gnu.org/software/make/
 
 Follow the instructions below to install OBITools:
 1.  Download <code>get-obitools.py</code> script available at https://pythonhosted.org/OBITools/_downloads/get-obitools.py
