@@ -27,7 +27,7 @@ To use ecoPCR you have to install the OBITools package. Please, ckeck if you hav
 
 To install OBITools package follow these instructions:
 1.  Download <code>get-obitools.py</code> script available at https://pythonhosted.org/OBITools/_downloads/get-obitools.py
-2.  When you have completed the download, move the file get-obitools.py to the folder where install OBITools. Run <code>python get-obitools.py</code> to create a new directory named "OBITools-VERSION" (i.e. version stands for the number of latest tool version available), where all the OBITools are installed automatically
+2.  When you have completed the download, move the file <code>get-obitools.py</code> to the folder where install OBITools. Run <code>python get-obitools.py</code> to create a new directory named "OBITools-VERSION" (i.e. version stands for the number of latest tool version available), where all the OBITools are installed automatically
 3.  Run the script <code>./obitools</code> to activate the OBITools
 4.  And finally once you have finish, type <code>exit</code> to disactivate the OBITools
 
