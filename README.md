@@ -35,7 +35,7 @@ To install OBITools package follow these instructions:
 
 Now you can create the database that will be used for the following *in silico* PCR by downloading the sequences of interest according to the information (i.e  target taxa, the barcode marker(s), and primer pairs) found in the literature search.
 
-<code>ARRIVATA FINO A QUI, CONTINUO STANOTTExxxxxxxxxxxxxxxxxx</code>
+<code>ARRIVATA FINO A QUI, CONTINUO DOMANI MATTINAxxxxxxxxxxxxxxxxxx</code>
 
 
 
