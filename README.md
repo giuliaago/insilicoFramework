@@ -45,7 +45,17 @@ Note that we choose to download from NCBI resulting in .gb files because the com
 
 ## Run ecoPCR
 
-Perform *in silico* PCR on the ecoPCR format sequences running the following command:
+Perform *in silico* PCR on the *ecoPCR* format sequences running the following command:
+
+<code>ecoPCR -d mydatabase PRIMER_SEQUENCES > file.ecopcr</code>
+
+We decided to add these specific options:
+* -e: Maximum number of mismatches between primer and sequence; if not specified the default value is 0
+* -l: Minimum length of the *in silico* amplified DNA fragment
+* -L: Maximum length of the *in silico* amplified DNA fragment 
+
+Please check all the other options avaialable at the page https://pythonhosted.org/OBITools/scripts/ecoPCR.html 
+
 
 <code>ecoPCR -d file -e 3 -l 80 -L 300 \
    FORWARDPRIMER REVERSEPRIMER > file.ecopcr</code>
