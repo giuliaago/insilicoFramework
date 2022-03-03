@@ -1,4 +1,4 @@
-# *In silico* framework 
+# *In silico* Framework 
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/86804408/156333546-aca868b4-f3df-47d2-a148-9516b52ec0b4.jpg" alt="IN silico PCR framework"/>
@@ -15,7 +15,7 @@ The framework consists of the following steps:
 
 As shown in the figure, you can return to the literature search step in any phase of the framework if the output isn't as you expect.
 
-As evidence of the feasibility and relevance of the proposed framework, we have uploaded the results of its application to the investigation of the giant red shrimp *A. foliacea* diet. Please visit the <code>xxxxxxxxxxxxxxxxxxxxxxxxxxxx</code> directory of this Github page to see ecoPCR outputs, scatter plots and sunburst plots extracting the taxonomy of the genes amplificated; both the visualizations were created via ExTaxsI tool [[3]](https://academic.oup.com/gigascience/article/doi/10.1093/gigascience/giab092/6514924?login=true).
+As evidence of the feasibility and relevance of the proposed framework, we have uploaded the results of its application to the investigation of the giant red shrimp *A. foliacea* diet. Please visit the <code>xxxxxxxxxxxxxxxxxxxxxxxxxxxx</code> directory of this Github page to see the dedicated framework, the ecoPCR outputs, scatter plots and sunburst plots extracting the taxonomy of the genes amplificated; both the visualizations were created via ExTaxsI tool [[3]](https://academic.oup.com/gigascience/article/doi/10.1093/gigascience/giab092/6514924?login=true).
 
 ## Download ecoPCR
 
@@ -29,60 +29,41 @@ To install OBITools package follow these instructions:
 1.  Download <code>get-obitools.py</code> script available at https://pythonhosted.org/OBITools/_downloads/get-obitools.py
 2.  When you have completed the download, move the file <code>get-obitools.py</code> to the folder where install OBITools. Run <code>python get-obitools.py</code> to create a new directory named "OBITools-VERSION" (i.e. version stands for the number of latest tool version available), where all the OBITools are installed automatically
 3.  Run the script <code>./obitools</code> to activate the OBITools
-4.  And finally once you have finish, type <code>exit</code> to disactivate the OBITools
+4.  Finally, once you have finish, type <code>exit</code> to disactivate the OBITools
 
 ## Download sequences with Entrez tools
 
 Now you can create the database that will be used for the following *in silico* PCR by downloading the sequences of interest according to the information (i.e  target taxa, the barcode marker(s), and primer pairs) found in the literature search. 
 
-To download the target sequences from NCBI database use the command <code>esearch -db nucleotide -query "txidNUM[ORGN] AND GENE" | efetch -format gb > file.gb</code>. 
+To download the target sequences from NCBI database use Entrez Direct (EDirect) [[5]](https://www.ncbi.nlm.nih.gov/books/NBK179288/) with the following command <code>esearch -db nucleotide -query | efetch -format</code>. 
+
+Visit EDirect book to explore all the command specific options at https://www.ncbi.nlm.nih.gov/books/NBK179288/
 
 ## Import sequences as ecoPCR database
 
-ecoPCR requires a database in the *ecoPCR* format in order to perform analyses. To convert the downloaded sequences from *GenBank* format to *ecoPCR* format, use the <code>obiconvert --genbank -t ./TAXO --ecopcrdb-output=file file.gb</code> command. 
+ecoPCR requires a database in the *ecoPCR* format in order to perform analyses. To convert the downloaded sequences to *ecoPCR* format, run <code>obiconvert --[inputformat] -t --ecopcrdb-output</code>. 
 
-Note that we choose to download from NCBI resulting in .gb files because the command <code>obiconvert</code> accepts this format. Please check which input file format are supported at the page https://pythonhosted.org/OBITools/scripts/obiconvert.html
+Please check which input file formats the command <code>obiconvert</code> supports at the page https://pythonhosted.org/OBITools/scripts/obiconvert.html
 
 ## Run ecoPCR
 
 Perform *in silico* PCR on the *ecoPCR* format sequences running the following command:
 
-<code>ecoPCR -d mydatabase PRIMER_SEQUENCES > file.ecopcr</code>
+<code>ecoPCR -d [mydatabase]</code>
 
-We decided to add these specific options:
-* -e: Maximum number of mismatches between primer and sequence; if not specified the default value is 0
-* -l: Minimum length of the *in silico* amplified DNA fragment
-* -L: Maximum length of the *in silico* amplified DNA fragment 
+Please check all the command specific options avaialable at the page https://pythonhosted.org/OBITools/scripts/ecoPCR.html 
 
-Please check all the other options avaialable at the page https://pythonhosted.org/OBITools/scripts/ecoPCR.html 
-
-
-<code>ecoPCR -d file -e 3 -l 80 -L 300 \
-   FORWARDPRIMER REVERSEPRIMER > file.ecopcr</code>
-
-We have decided to:
-* allow a maximum of three errors per primer with the option <code>-e 3</code> 
-* have at least 80 bases long outputs with the option <code>-l 80</code> 
-* have a maximum length of 200 bases outputs with the option <code>-L 300</code>
-
-"FORWARDPRIMER" and "REVERSEPRIMER" indicate the sequences of the forward and reverse primers, respectively.
-
-
-Run <code>ecotaxstat</code> command to evaluate the primer pairs performance comparing ecoPCR output, i.e. the amplified sequences, to the original ecoPCR database:
-
-<code>ecotaxstat -d file -r 29178 file.ecopcr > ecotaxstat_file</code>
-
-NB file stands for ecoPCR format database, file.ecopcr stands for ecoPCR amplified sequences, ecotaxstat_file is the output of the current command.
+After the amplification, evaluate the primer pairs performance comparing ecoPCR output, i.e. the amplified sequences, to the original ecoPCR database. To do so, use this command: <code>ecotaxstat -d [mydatabase]</code>. You can add some specific option, check out there: https://pythonhosted.org/OBITools/scripts/ecotaxstat.html
 
 ## Visualization of results
 
-Extract the list of taxIDs from the ecoPCR outputs, i.e. amplified sequences, using this script: <code>xxx</code>
+Explore and visualize the data generated. To do so, use the script <code>xxxxxxxxxxxxxxxx</code> we have developed to extract the list of taxIDs from the ecoPCR outputs. <code>???????????????</code>
 
-Convert the list of taxIDs to a 6 level rank file using the Taxonomy ID converter module (Module number 2) of the tool <code>ExTaxsI</code>. Download ExTaxsI at https://github.com/qLSLab/ExTaxsI
 
-Now you are ready to visualize the results. Use the Visualization module (Module number 2) of <code>ExTaxsI</code> to create scatter plots and sunburst plots from the taxonomy file.
 
-To download and install ExTaxsI, please visit ExTaxsI GitHub page https://github.com/qLSLab/ExTaxsI and follow the instructions. 
+To convert the taxIDs list generated to a taxonomy list use <code>ExTaxsI</code> “Taxonomy ID converter” module. ExTaxsI is an open-source user friendly bioinformatic tool, written in Python 3.7, that you can download and install following the instructions present in its GitHub page https://github.com/qLSLab/ExTaxsI. If you want to know more about this tool, see [[3]](https://academic.oup.com/gigascience/article/doi/10.1093/gigascience/giab092/6514924?login=true).
+
+Now you are ready to visualize the results. Use <code>ExTaxsI</code> "Visualization" module to generate a variety of plots from the previous taxonomy file.
 
 ## References
 
@@ -93,3 +74,5 @@ To download and install ExTaxsI, please visit ExTaxsI GitHub page https://github
 [3] Agostinetto, G., Brusati, A., Sandionigi, A., Chahed, A., Parladori, E., Balech, B., ... & Casiraghi, M. (2022). ExTaxsI: an exploration tool of biodiversity molecular data. GigaScience, 11. https://doi.org/10.1093/gigascience/giab092
 
 [4] Wu, S., & Manber, U. (1992, January). Agrep–a fast approximate pattern-matching tool. In Usenix Winter 1992 Technical Conference (pp. 153-162). 
+
+[5] Kans, J. (2022). Entrez direct: E-utilities on the UNIX command line. In Entrez Programming Utilities Help [Internet]. National Center for Biotechnology Information (US). URL: https://www.ncbi.nlm.nih.gov/books/
