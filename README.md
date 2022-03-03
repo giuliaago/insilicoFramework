@@ -17,7 +17,13 @@ As shown in the figure, you can return to the literature search step in any phas
 
 As evidence of the feasibility and relevance of the proposed framework, we have uploaded the results of its application to the investigation of the giant red shrimp *A. foliacea* diet. Please visit the <code>xxxxxxxxxxxxxxxxxxxxxxxxxxxx</code> directory of this Github page to see the dedicated framework, the ecoPCR outputs, scatter plots and sunburst plots extracting the taxonomy of the genes amplificated; both the visualizations were created via ExTaxsI tool [[3]](https://academic.oup.com/gigascience/article/doi/10.1093/gigascience/giab092/6514924?login=true).
 
-## Download ecoPCR
+## Data availability and download
+
+<code>mio script + visualizzazione extaxsi</code>
+
+## In silico amplification
+
+### Download ecoPCR
 
 ecoPCR is the program included in the OBITools package aimed at performing *in silico* PCR. Based on the pattern matching algorithm Agrep [[4]](https://www.usenix.org/legacy/publications/library/proceedings/wu.pdf), ecoPCR allows specifying the count of mismatches (up to a maximum of three) between the primer and the target sequence. Furthermore, this tool accepts multiple target sequences (i.e. the templates) which is crucial if you want to predict the amplification results of a metabarcoding study.
 
@@ -31,7 +37,7 @@ To install OBITools package follow these instructions:
 3.  Run the script <code>./obitools</code> to activate the OBITools
 4.  Finally, once you have finish, type <code>exit</code> to disactivate the OBITools
 
-## Download sequences with Entrez tools
+### Download sequences with Entrez tools
 
 Now you can create the database that will be used for the following *in silico* PCR by downloading the sequences of interest according to the information (i.e  target taxa, the barcode marker(s), and primer pairs) found in the literature search. 
 
@@ -39,13 +45,13 @@ To download the target sequences from NCBI database use Entrez Direct (EDirect) 
 
 Visit EDirect book to explore all the command specific options at https://www.ncbi.nlm.nih.gov/books/NBK179288/
 
-## Import sequences as ecoPCR database
+### Import sequences as ecoPCR database
 
 ecoPCR requires a database in the *ecoPCR* format in order to perform analyses. To convert the downloaded sequences to *ecoPCR* format, run <code>obiconvert --[inputformat] -t --ecopcrdb-output</code>. 
 
 Please check which input file formats the command <code>obiconvert</code> supports at the page https://pythonhosted.org/OBITools/scripts/obiconvert.html
 
-## Run ecoPCR
+### Run ecoPCR
 
 Perform *in silico* PCR on the *ecoPCR* format sequences running the following command:
 
@@ -59,11 +65,11 @@ After the amplification, evaluate the primer pairs performance comparing ecoPCR 
 
 Explore and visualize the data generated. To do so, use the script <code>xxxxxxxxxxxxxxxx</code> we have developed to extract the list of taxIDs from the ecoPCR outputs. <code>???????????????</code>
 
-
-
 To convert the taxIDs list generated to a taxonomy list use <code>ExTaxsI</code> “Taxonomy ID converter” module. ExTaxsI is an open-source user friendly bioinformatic tool, written in Python 3.7, that you can download and install following the instructions present in its GitHub page https://github.com/qLSLab/ExTaxsI. If you want to know more about this tool, see [[3]](https://academic.oup.com/gigascience/article/doi/10.1093/gigascience/giab092/6514924?login=true).
 
 Now you are ready to visualize the results. Use <code>ExTaxsI</code> "Visualization" module to generate a variety of plots from the previous taxonomy file.
+
+## 
 
 ## References
 
