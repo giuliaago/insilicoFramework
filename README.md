@@ -4,7 +4,7 @@
   <img src="https://user-images.githubusercontent.com/86804408/156333546-aca868b4-f3df-47d2-a148-9516b52ec0b4.jpg" alt="IN silico PCR framework"/>
 </p>
 
-This framework aims for a data-driven selection of the best primer pairs candidates to potentially use in a more conscious molecular characterization of any metabarcoding study. It integrates the widely used ecoPCR software <a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-11-434">[1]</a> from OBITools <a href=https://onlinelibrary.wiley.com/doi/full/10.1111/1755-0998.12428>[2]</a> with a user-defined database without the download of the entire EMBL database. 
+This framework aims for a data-driven selection of the best primer pairs candidates to potentially use in a more conscious molecular characterization of any metabarcoding study. It integrates the widely used ecoPCR software [[1]](https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-11-434) from OBITools [[2]](https://onlinelibrary.wiley.com/doi/full/10.1111/1755-0998.12428) with a user-defined database without the download of the entire EMBL database. 
 
 The framework consists of the following steps: 
 1. **Literature search: background information investigation.** This step consists in the exploration of the background information, i.e. ecological niche, already available in scientific literature to define the expected taxa present in the investigated environment.
@@ -15,11 +15,11 @@ The framework consists of the following steps:
 
 As shown in the figure, you can return to the literature search step in any phase of the framework if the output isn't as you expect.
 
-As evidence of the feasibility and relevance of the proposed framework, we have uploaded the results of its application to the investigation of the giant red shrimp *A. foliacea* diet. Please visit the **xxx** directory of this Github page to see ecoPCR outputs, scatter plots and sunburst plots extracting the taxonomy of the genes amplificated; both the visualizations were created via ExTaxsI tool <a href="https://academic.oup.com/gigascience/article/doi/10.1093/gigascience/giab092/6514924?login=true">[3]</a>.
+As evidence of the feasibility and relevance of the proposed framework, we have uploaded the results of its application to the investigation of the giant red shrimp *A. foliacea* diet. Please visit the <code>xxxxxxxxxxxxxxxxxxxxxxxxxxxx</code> directory of this Github page to see ecoPCR outputs, scatter plots and sunburst plots extracting the taxonomy of the genes amplificated; both the visualizations were created via ExTaxsI tool [[3]](https://academic.oup.com/gigascience/article/doi/10.1093/gigascience/giab092/6514924?login=true).
 
 ## Download ecoPCR
 
-ecoPCR is the program included in the OBITools package aimed at performing *in silico* PCR. Based on the pattern matching algorithm Agrep <a href="https://www.usenix.org/legacy/publications/library/proceedings/wu.pdf">[4]</a>, ecoPCR allows specifying the count of mismatches (up to a maximum of three) between the primer and the target sequence. Furthermore, this tool accepts multiple target sequences (i.e. the templates) which is crucial if you want to predict the amplification results of a metabarcoding study.
+ecoPCR is the program included in the OBITools package aimed at performing *in silico* PCR. Based on the pattern matching algorithm Agrep [[4]](https://www.usenix.org/legacy/publications/library/proceedings/wu.pdf), ecoPCR allows specifying the count of mismatches (up to a maximum of three) between the primer and the target sequence. Furthermore, this tool accepts multiple target sequences (i.e. the templates) which is crucial if you want to predict the amplification results of a metabarcoding study.
 
 To use ecoPCR you have to install the OBITools package. Please, ckeck if you have the following required software:
 * **Python 2.7**, that you can download at https://www.python.org/
@@ -33,21 +33,19 @@ To install OBITools package follow these instructions:
 
 ## Download sequences with Entrez tools
 
-Now you can create the database that will be used for the following *in silico* PCR by downloading the sequences of interest according to the information (i.e  target taxa, the barcode marker(s), and primer pairs) found in the literature search.
+Now you can create the database that will be used for the following *in silico* PCR by downloading the sequences of interest according to the information (i.e  target taxa, the barcode marker(s), and primer pairs) found in the literature search. 
 
-<code>ARRIVATA FINO A QUI, CONTINUO DOMANI MATTINAxxxxxxxxxxxxxxxxxx</code>
-
-
-
-Download the locus sequences for the taxa of interest from GenBank using the command <code>esearch -db nucleotide -query "txid29178[ORGN] AND GENE " | efetch -format gb > file.gb</code>. 
+To download the target sequences from NCBI database use the command <code>esearch -db nucleotide -query "txidNUM[ORGN] AND GENE" | efetch -format gb > file.gb</code>. 
 
 ## Import sequences as ecoPCR database
 
-ecoPCR requires a database in the ecoPCR format in order to perform analyses. To convert the downloaded sequences to ecoPCR format, use the <code>obiconvert --genbank -t ./TAXO --ecopcrdb-output=file file.gb</code> command. 
+ecoPCR requires a database in the *ecoPCR* format in order to perform analyses. To convert the downloaded sequences from *GenBank* format to *ecoPCR* format, use the <code>obiconvert --genbank -t ./TAXO --ecopcrdb-output=file file.gb</code> command. 
+
+Note that we choose to download from NCBI resulting in .gb files because the command <code>obiconvert</code> accepts this format. Please check which input file format are supported at the page https://pythonhosted.org/OBITools/scripts/obiconvert.html
 
 ## Run ecoPCR
 
-Perform in silico PCR on the ecoPCR format sequences running the following command:
+Perform *in silico* PCR on the ecoPCR format sequences running the following command:
 
 <code>ecoPCR -d file -e 3 -l 80 -L 300 \
    FORWARDPRIMER REVERSEPRIMER > file.ecopcr</code>
@@ -83,3 +81,5 @@ To download and install ExTaxsI, please visit ExTaxsI GitHub page https://github
 [2] Boyer, F., Mercier, C., Bonin, A., Le Bras, Y., Taberlet, P., & Coissac, E. (2016). obitools: A unix‐inspired software package for DNA metabarcoding. Molecular ecology resources, 16(1), 176-182. https://doi.org/10.1111/1755-0998.12428
 
 [3] Agostinetto, G., Brusati, A., Sandionigi, A., Chahed, A., Parladori, E., Balech, B., ... & Casiraghi, M. (2022). ExTaxsI: an exploration tool of biodiversity molecular data. GigaScience, 11. https://doi.org/10.1093/gigascience/giab092
+
+[4] Wu, S., & Manber, U. (1992, January). Agrep–a fast approximate pattern-matching tool. In Usenix Winter 1992 Technical Conference (pp. 153-162). 
