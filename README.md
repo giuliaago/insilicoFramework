@@ -4,7 +4,7 @@
   <img src="https://user-images.githubusercontent.com/86804408/156333546-aca868b4-f3df-47d2-a148-9516b52ec0b4.jpg" alt="IN silico PCR framework"/>
 </p>
 
-This framework aims for a data-driven selection of the best primer pairs candidates to potentially use in a more conscious molecular characterization of any metabarcoding study. It integrates the widely used ecoPCR software [[1]](https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-11-434) from OBITools [[2]](https://onlinelibrary.wiley.com/doi/full/10.1111/1755-0998.12428) with a user-defined database without the download of the entire EMBL database. 
+This framework aims for a data-driven selection of the best primer pairs candidates for a more conscious molecular characterization of any metabarcoding study. It integrates the widely used ecoPCR software [[1]](https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-11-434) from OBITools [[2]](https://onlinelibrary.wiley.com/doi/full/10.1111/1755-0998.12428) with a user-defined database without the download of the entire EMBL database. 
 
 The framework consists of the following steps: 
 1. **Literature search: background information investigation.** This step consists in the exploration of the background information, i.e. ecological niche, already available in scientific literature to define the expected taxa present in the investigated environment.
