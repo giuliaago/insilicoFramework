@@ -19,7 +19,17 @@ As evidence of the feasibility and relevance of the proposed framework, we have 
 
 ## Data availability and download
 
-Once you have identified target taxa, metabarcoding marker(s), and primer pair candidate(s), use a combination of queries to assess the sequences available in the NCBI database. ExTaxsI tool was used to create the queries and download the data. You can check if the query used and the downloaded data are appropriate by visualizing the downloaded taxa. You can do this in two ways:
+Once you have identified target taxa, metabarcoding marker(s), and primer pair candidate(s), use a combination of queries to assess the sequences available in the NCBI database. 
+
+### Download sequences with Entrez tools
+
+Now you can create the database that will be used for the following *in silico* PCR by downloading the sequences of interest according to the information (i.e  target taxa, the barcode marker(s), and primer pairs) found in the literature search. 
+
+To download the target sequences from NCBI database use Entrez Direct (EDirect) [[5]](https://www.ncbi.nlm.nih.gov/books/NBK179288/) with the following command <code>esearch -db nucleotide -query | efetch -format</code>. 
+
+Visit EDirect book to explore all the command specific options at https://www.ncbi.nlm.nih.gov/books/NBK179288/
+
+You can check if the query used and the downloaded data are appropriate by visualizing the downloaded taxa. You can do this in two ways:
 
 1. **Extract the taxIDs list from the downloaded sequences and then convert it to a taxonomy list**
 
@@ -74,14 +84,6 @@ To install OBITools package follow these instructions:
 2.  When you have completed the download, move the file <code>get-obitools.py</code> to the folder where install OBITools. Run <code>python get-obitools.py</code> to create a new directory named "OBITools-VERSION" (i.e. version stands for the number of latest tool version available), where all the OBITools are installed automatically
 3.  Run the script <code>./obitools</code> to activate the OBITools
 4.  Finally, once you have finish, type <code>exit</code> to disactivate the OBITools
-
-### Download sequences with Entrez tools
-
-Now you can create the database that will be used for the following *in silico* PCR by downloading the sequences of interest according to the information (i.e  target taxa, the barcode marker(s), and primer pairs) found in the literature search. 
-
-To download the target sequences from NCBI database use Entrez Direct (EDirect) [[5]](https://www.ncbi.nlm.nih.gov/books/NBK179288/) with the following command <code>esearch -db nucleotide -query | efetch -format</code>. 
-
-Visit EDirect book to explore all the command specific options at https://www.ncbi.nlm.nih.gov/books/NBK179288/
 
 ### Import sequences as ecoPCR database
 
