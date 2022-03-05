@@ -9,17 +9,26 @@ This framework aims for a data-driven selection of the best primer pairs candida
 The framework consists of the following steps: 
 1. **Literature search: background information investigation.** This step consists in the exploration of the background information, i.e. ecological niche, already available in scientific literature to define the expected taxa present in the investigated environment.
 2. **Literature search: molecular marker investigation.** Based on the predicted taxa, identify the most appropriate metabarcoding marker(s) with the resolution at the taxonomic levels of interest and, consequently, the suitable primer pairs to amplify them.
-3. **Data availability and download.** Evaluate the genetic information available in the NCBI database (https://www.ncbi.nlm.nih.gov/) through different combination of queries, based on the TaxID, the locus of interest, and the metadata. This step is crucial to obtain a defined database.
+3. **Data availability and download.** Evaluate the genetic information available in the NCBI database (https://www.ncbi.nlm.nih.gov/) through different combination of queries, based on the TaxID, the locus of interest, and the metadata, and data visualization. This step is crucial to obtain a defined database.
 4. ***In silico* amplification.** Amplify the sequences of the expected taxa using the primer pairs candidates via ecoPCR from the obitools package. 
 5. **Data exploration and visualization.** Evaluate primer pairs performance, i.e. producing visualizations. 
 
 As shown in the figure, you can return to the literature search step in any phase of the framework if the output isn't as you expect.
 
-As evidence of the feasibility and relevance of the proposed framework, we have uploaded the results of its application to the investigation of the giant red shrimp *A. foliacea* diet. Please visit the <code>xxxxxxxxxxxxxxxxxxxxxxxxxxxx</code> directory of this Github page to see the dedicated framework, the ecoPCR outputs, scatter plots and sunburst plots extracting the taxonomy of the genes amplificated; both the visualizations were created via ExTaxsI tool [[3]](https://academic.oup.com/gigascience/article/doi/10.1093/gigascience/giab092/6514924?login=true).
+As evidence of the feasibility and relevance of the proposed framework, we have uploaded the results of its application to the investigation of the giant red shrimp *A. foliacea* diet. Please visit the <code>Case study</code> directory of this Github page to see the dedicated framework, the ecoPCR outputs, scatter plots and sunburst plots extracting the taxonomy of the genes amplificated; both the visualizations were created via ExTaxsI tool [[3]](https://academic.oup.com/gigascience/article/doi/10.1093/gigascience/giab092/6514924?login=true).
 
 ## Data availability and download
 
-<code>mio script + visualizzazione extaxsi</code>
+Once you have identified target taxa, metabarcoding marker(s), and primer pair candidate(s), use a combination of queries to assess the sequences available in the NCBI database.  Therefore, choose the best query and download data. You can check if the query used and the downloaded data are appropriate by visualizing the downloaded taxa. You can do this in two ways:
+
+1. Extract the species taxIDs list from the downloaded sequences and then convert it to a taxonomy list
+
+or
+
+2. Download the taxIDs list using the same sequences and then convert it to a taxonomy list
+
+<code>mio script + visualizzazione extaxsixxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</code>
+
 
 ## In silico amplification
 
@@ -57,19 +66,41 @@ Perform *in silico* PCR on the *ecoPCR* format sequences running the following c
 
 <code>ecoPCR -d [mydatabase]</code>
 
-Please check all the command specific options avaialable at the page https://pythonhosted.org/OBITools/scripts/ecoPCR.html 
+Check all the command specific options avaialable at the page https://pythonhosted.org/OBITools/scripts/ecoPCR.html 
 
 After the amplification, evaluate the primer pairs performance comparing ecoPCR output, i.e. the amplified sequences, to the original ecoPCR database. To do so, use this command: <code>ecotaxstat -d [mydatabase]</code>. You can add some specific option, check out there: https://pythonhosted.org/OBITools/scripts/ecotaxstat.html
 
-## Visualization of results
+## Data exploration and visualization
 
-Explore and visualize the data generated. To do so, use the script <code>xxxxxxxxxxxxxxxx</code> we have developed to extract the list of taxIDs from the ecoPCR outputs. <code>???????????????</code>
+In order to explore and visualize the data generated you need to have a list of organisms that have been amplified. You can do this by extracting the species taxIDs list and then converting it to a taxonomy list. 
+
+Use the script <code>taxid_list_ecopcr.sh</code> we have developed to extract the list of taxIDs from the ecoPCR outputs. To download the script:
+
+* Clone github repository (link: https://github.com/giuliaago/insilicoFramework) and:
+
+  * Download ZIP from insilicoFramework github home page, then decompress it
+
+or
+
+  * Use git from command line: <code>git clone https://github.com/giuliaago/insilicoFramework</code>
+
+Once downloaded, 
+
+* Move <code>taxid_list_ecopcr.sh</code> in the directory where there are ecoPCR outputs 
+
+* Check if the script is executable with command <code>ls -l</code>. If it is not run the command <code>chmod +x taxid_list_ecopcr.sh</code>
+
+* Execute the script using <code>./taxid_list_ecopcr.sh</code>
+
+As an output, the script generates a TSV file named <code>taxid_list_ecopcr.tsv</code>, which contains a list of taxIDs extracted from ecoPCR amplified sequences.
 
 To convert the taxIDs list generated to a taxonomy list use <code>ExTaxsI</code> “Taxonomy ID converter” module. ExTaxsI is an open-source user friendly bioinformatic tool, written in Python 3.7, that you can download and install following the instructions present in its GitHub page https://github.com/qLSLab/ExTaxsI. If you want to know more about this tool, see [[3]](https://academic.oup.com/gigascience/article/doi/10.1093/gigascience/giab092/6514924?login=true).
 
 Now you are ready to visualize the results. Use <code>ExTaxsI</code> "Visualization" module to generate a variety of plots from the previous taxonomy file.
 
-## 
+## Case study: *Aristomorpha foliacea*
+
+
 
 ## References
 
