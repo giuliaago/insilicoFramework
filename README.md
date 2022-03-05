@@ -15,20 +15,49 @@ The framework consists of the following steps:
 
 As shown in the figure, you can return to the literature search step in any phase of the framework if the output isn't as you expect.
 
-As evidence of the feasibility and relevance of the proposed framework, we have uploaded the results of its application to the investigation of the giant red shrimp *A. foliacea* diet. Please visit the <code>Case study</code> directory of this Github page to see the dedicated framework, the ecoPCR outputs, scatter plots and sunburst plots extracting the taxonomy of the genes amplificated; both the visualizations were created via ExTaxsI tool [[3]](https://academic.oup.com/gigascience/article/doi/10.1093/gigascience/giab092/6514924?login=true).
+As evidence of the feasibility and relevance of the proposed framework, we have uploaded the results of its application to the investigation of the giant red shrimp *A. foliacea* diet. Please visit the <code>Case_study</code> directory of this Github page to see the dedicated framework, the ecoPCR outputs, scatter plots and sunburst plots extracting the taxonomy of the genes amplificated; both the visualizations were created via ExTaxsI tool [[3]](https://academic.oup.com/gigascience/article/doi/10.1093/gigascience/giab092/6514924?login=true).
 
 ## Data availability and download
 
 Once you have identified target taxa, metabarcoding marker(s), and primer pair candidate(s), use a combination of queries to assess the sequences available in the NCBI database.  Therefore, choose the best query and download data. You can check if the query used and the downloaded data are appropriate by visualizing the downloaded taxa. You can do this in two ways:
 
-1. Extract the species taxIDs list from the downloaded sequences and then convert it to a taxonomy list
+1. **Extract the taxIDs list from the downloaded sequences and then convert it to a taxonomy list
 
 or
 
-2. Download the taxIDs list using the same sequences and then convert it to a taxonomy list
+2. **Download the taxonomy list
 
-<code>mio script + visualizzazione extaxsixxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</code>
+### 1. Extract taxIDs list -> taxonomy list
 
+Use the script <code>taxid_list_gb.sh</code> we have developed to extract the list of taxIDs from the sequences downloaded from NCBI database (GenBank). To download the script:
+
+* Clone github repository (link: https://github.com/giuliaago/insilicoFramework) and:
+
+  * Download ZIP from insilicoFramework github home page, then decompress it
+
+or
+
+  * Use git from command line: <code>git clone https://github.com/giuliaago/insilicoFramework</code>
+
+Once download the script, 
+
+* Move <code>taxid_list_gb.sh</code> in the directory where the downloaded sequences are 
+
+* Check if the script is executable with command <code>ls -l</code>. If it is not run the command <code>chmod +x taxid_list_gb.sh</code>
+
+* Execute the script using <code>./taxid_list_gb.sh</code>
+
+As an output, the script generates a TSV file named <code>taxid_list_gb.tsv</code>, which contains a list of taxIDs extracted from GenBank downloaded sequences.
+
+To convert the taxIDs list generated to a taxonomy list use <code>ExTaxsI</code> “Taxonomy ID converter” module. ExTaxsI is an open-source user friendly bioinformatic tool, written in Python 3.7, that you can download and install following the instructions present in its GitHub page https://github.com/qLSLab/ExTaxsI. If you want to know more about this tool, see [[3]](https://academic.oup.com/gigascience/article/doi/10.1093/gigascience/giab092/6514924?login=true).
+
+Now you are ready to visualize the results. Use <code>ExTaxsI</code> "Visualization" module to generate a variety of plots from the previous taxonomy file.
+
+### 2. Download the taxonomy list
+
+Use <code>ExTaxsI</code> to get the taxonomy list xxxxxxxxxxxxxxxxxxxxx
+
+* To download the taxonomy list use <code>ExTaxsI</code> “Taxonomy ID converter” module.
 
 ## In silico amplification
 
@@ -94,7 +123,7 @@ Once downloaded,
 
 As an output, the script generates a TSV file named <code>taxid_list_ecopcr.tsv</code>, which contains a list of taxIDs extracted from ecoPCR amplified sequences.
 
-To convert the taxIDs list generated to a taxonomy list use <code>ExTaxsI</code> “Taxonomy ID converter” module. ExTaxsI is an open-source user friendly bioinformatic tool, written in Python 3.7, that you can download and install following the instructions present in its GitHub page https://github.com/qLSLab/ExTaxsI. If you want to know more about this tool, see [[3]](https://academic.oup.com/gigascience/article/doi/10.1093/gigascience/giab092/6514924?login=true).
+To convert the taxIDs list generated to a taxonomy list use <code>ExTaxsI</code> “Taxonomy ID converter” module. 
 
 Now you are ready to visualize the results. Use <code>ExTaxsI</code> "Visualization" module to generate a variety of plots from the previous taxonomy file.
 
