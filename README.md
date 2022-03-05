@@ -15,7 +15,7 @@ The framework consists of the following steps:
 
 As shown in the figure, you can return to the literature search step in any phase of the framework if the output isn't as you expect.
 
-As evidence of the feasibility and relevance of the proposed framework, we have uploaded the results of its application to the investigation of the giant red shrimp *A. foliacea* diet. Please visit the <code>Case_study</code> directory of this Github page to see the dedicated framework, the ecoPCR outputs, scatter plots and sunburst plots extracting the taxonomy of the genes amplificated; both the visualizations were created via ExTaxsI tool [[3]](https://academic.oup.com/gigascience/article/doi/10.1093/gigascience/giab092/6514924?login=true).
+As evidence of the feasibility and relevance of the proposed framework, we have uploaded the results of its application to the investigation of the giant red shrimp *A. foliacea* diet. Please visit the <code>case_study</code> directory of this Github page to see the dedicated framework, the ecoPCR outputs, scatter plots and sunburst plots extracting the taxonomy of the genes amplificated; both the visualizations were created via ExTaxsI tool [[3]](https://academic.oup.com/gigascience/article/doi/10.1093/gigascience/giab092/6514924?login=true).
 
 ## Data availability and download
 
@@ -129,7 +129,7 @@ Now you are ready to visualize the results. Use <code>ExTaxsI</code> "Visualizat
 
 ## Case study: *Aristomorpha foliacea*
 
-We have applied the descripted framework to the investigation of the giant red shrimp diet for food traceability aims. View the dedicated framework, the ecoPCR amplification outputs, scatter plots, and sunburst plots of the genes amplificated in the <code>Case_study</code> directory of this Github page. 
+We have applied the descripted framework to the investigation of the giant red shrimp diet for food traceability aims. View the dedicated framework, the ecoPCR amplification outputs, scatter plots, and sunburst plots of the genes amplificated in the <code>case_study</code> directory of this Github page. 
 
 ## References
 
