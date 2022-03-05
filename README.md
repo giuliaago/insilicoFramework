@@ -21,13 +21,13 @@ As evidence of the feasibility and relevance of the proposed framework, we have 
 
 Once you have identified target taxa, metabarcoding marker(s), and primer pair candidate(s), use a combination of queries to assess the sequences available in the NCBI database. 
 
-### Download sequences with Entrez tools
-
-Now you can create the database that will be used for the following *in silico* PCR by downloading the sequences of interest according to the information (i.e  target taxa, the barcode marker(s), and primer pairs) found in the literature search. 
+### Download sequences with Entrez tools 
 
 To download the target sequences from NCBI database use Entrez Direct (EDirect) [[5]](https://www.ncbi.nlm.nih.gov/books/NBK179288/) with the following command <code>esearch -db nucleotide -query | efetch -format</code>. 
 
 Visit EDirect book to explore all the command specific options at https://www.ncbi.nlm.nih.gov/books/NBK179288/
+
+### Visualize downloaded sequences
 
 You can check if the query used and the downloaded data are appropriate by visualizing the downloaded taxa. You can do this in two ways:
 
