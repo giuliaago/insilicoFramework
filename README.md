@@ -19,15 +19,15 @@ As evidence of the feasibility and relevance of the proposed framework, we have 
 
 ## Data availability and download
 
-Once you have identified target taxa, metabarcoding marker(s), and primer pair candidate(s), use a combination of queries to assess the sequences available in the NCBI database.  Therefore, choose the best query and download data. You can check if the query used and the downloaded data are appropriate by visualizing the downloaded taxa. You can do this in two ways:
+Once you have identified target taxa, metabarcoding marker(s), and primer pair candidate(s), use a combination of queries to assess the sequences available in the NCBI database. ExTaxsI tool was used to create the queries and download the data. You can check if the query used and the downloaded data are appropriate by visualizing the downloaded taxa. You can do this in two ways:
 
-1. **Extract the taxIDs list from the downloaded sequences and then convert it to a taxonomy list
+1. **Extract the taxIDs list from the downloaded sequences and then convert it to a taxonomy list**
 
 or
 
-2. **Download the taxonomy list
+2. **Download the taxonomy list**
 
-### 1. Extract taxIDs list -> taxonomy list
+### 1. Extract taxIDs list to get taxonomy list
 
 Use the script <code>taxid_list_gb.sh</code> we have developed to extract the list of taxIDs from the sequences downloaded from NCBI database (GenBank). To download the script:
 
@@ -55,9 +55,9 @@ Now you are ready to visualize the results. Use <code>ExTaxsI</code> "Visualizat
 
 ### 2. Download the taxonomy list
 
-Use <code>ExTaxsI</code> to get the taxonomy list xxxxxxxxxxxxxxxxxxxxx
+* Use <code>ExTaxsI</code> “Database creation” module to download files with accession and taxonomy
 
-* To download the taxonomy list use <code>ExTaxsI</code> “Taxonomy ID converter” module.
+Then generate a variety of plots from the previous taxonomy file using <code>ExTaxsI</code> "Visualization" module
 
 ## In silico amplification
 
@@ -129,7 +129,7 @@ Now you are ready to visualize the results. Use <code>ExTaxsI</code> "Visualizat
 
 ## Case study: *Aristomorpha foliacea*
 
-
+We have applied the descripted framework to the investigation of the giant red shrimp diet for food traceability aims. View the dedicated framework, the EcoPCR amplification outputs, scatter plots, and sunburst plots of the genes amplificated in the <code>Case_study</code> directory of this Github page. 
 
 ## References
 
