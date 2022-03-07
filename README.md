@@ -133,6 +133,15 @@ Now you are ready to visualize the results. Use <code>ExTaxsI</code> "Visualizat
 
 We have applied the descripted framework to the investigation of the giant red shrimp diet for food traceability aims. View the dedicated framework, the ecoPCR amplification outputs, scatter plots, and sunburst plots of the genes amplificated in the <code>case_study</code> directory of this Github page. 
 
+Contacts
+-----------------------------------------------------
+* Name: __Giulia Agostinetto__
+* e-mail: __g.agostinetto@unimib.it__
+* Name: __Sara Fumagalli__
+* e-mail: __s.fumagalli66@campus.unimib.it__
+
+Please refer to both contacts for further information or issues related to the framework.
+
 ## References
 
 [1] Ficetola, G. F., Coissac, E., Zundel, S., Riaz, T., Shehzad, W., Bessière, J., ... & Pompanon, F. (2010). An in silico approach for the evaluation of DNA barcodes. BMC genomics, 11(1), 1-10. https://doi.org/10.1186/1471-2164-11-434
