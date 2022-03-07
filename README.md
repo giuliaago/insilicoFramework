@@ -136,9 +136,9 @@ We have applied the descripted framework to the investigation of the giant red s
 Contacts
 -----------------------------------------------------
 * Name: __Giulia Agostinetto__
-** e-mail: __giulia.agostinetto@unimib.it__
+* e-mail: __giulia.agostinetto@unimib.it__
 * Name: __Sara Fumagalli__
-** e-mail: __s.fumagalli66@campus.unimib.it__
+* e-mail: __s.fumagalli66@campus.unimib.it__
 
 Please refer to both contacts for further information or issues related to the framework.
 
